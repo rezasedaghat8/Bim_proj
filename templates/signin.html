@@ -1,0 +1,15 @@
+<h1> 
+    SignIn ... YOU are secessfully SINED IN...
+</h1>
+
+<form action="/signin2" method="post">
+    {% csrf_token %}    
+        
+        <label for="">User name</label>
+        <input type="text" id="username" name="username" placeholder="Enter your user name" Required>
+            <br>
+        <label for="">Password</label>
+        <input type="text" id="password" name="password" placeholder="Enter your password" Required>
+        
+        <button type="submit">SignIn</button>
+</form>

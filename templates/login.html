@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/style2.css">
+    <!-- this script for use icon from Font Awesome website -->
+    <script
+      src="https://kit.fontawesome.com/e236dc9dfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- this script for use icon from Font Awesome website -->
+    <title>Document</title>
+  </head>
+  <body
+    class="font-myFont bg-gradinatDark-gray flex justify-center items-center h-screen w-screen transition-all duration-300"
+  >
+      <!-- Login page start -->
+      <div
+      class="bg-semiWhite text-black text-2xl font-bold text-center rounded-lg md:w-2/5 w-94% md:p-10 p-3 relative"
+      >
+      <div class="flex flex-col gap-4">
+        <span
+          class="xl:text-4xl md:text-2xl text-3xl font-extrabold mb-3 border-2 md:border-black rounded-md xl:ml-24 xl:mr-24 md:ml-8 md:mr-8 p-3"
+          >ورود به سیستم</span
+        >
+    <form class="flex flex-col gap-4" action="/home" method="post">
+      {% csrf_token %} 
+        
+        <label for="nationalCode" class="text-right pr-2 text-xl"
+          >:کد ملی</label
+        >
+      
+    
+        <input
+          type="text"
+          id="nationalCode"
+          placeholder="کد ملی خود را وارد کنید"
+          class="rounded-xl p-1 pr-3 pl-3 focus:outline-none text-semiWhite bg-gradinatDark-gray placeholder:text-right placeholder:text-xl placeholder:text-gray-400"
+        />
+
+        <label for="password" class="text-right pr-2 text-xl">:پسورد</label>
+
+        <input
+          type="password"
+          id="password"
+          placeholder="رمز عبور خود را وارد کنید"
+          class="fieldPassword rounded-xl p-1 pr-3 pl-3 focus:outline-none text-semiWhite bg-gradinatDark-gray placeholder:text-right placeholder:text-xl placeholder:text-gray-400 mb-9"
+        />
+        <button class="seePassword hidden">
+          <i
+            class="fa-solid fa-eye text-white ml-2 absolute top-64 right-5 xl:top-72 xl:right-14 lg:top-70 lg:right-14 md:top-70 md:right-14"
+          ></i>
+        </button>
+
+        <span>
+          <button type = "submit"
+            class="bg-bluewhte p-4 pl-10 pr-10 rounded-lg hover:bg-gradinatDark-gray hover:text-semiWhite transition-all duration-500"
+          >
+            ورود
+          </button>
+        </span>
+    </form>
+        <!-- <span class="text-xl"
+          >رمز عبور خود را فراموش کرده اید؟
+          <span
+            class="text-blue-600 underline font-bold hover:text-black transition-all duration-200"
+          >
+            <a href="#">بازیابی رمز عبور</a></span
+          ></span
+        > -->
+      </div>
+    </div>
+    <!-- Login page end -->
+
+    <!-- js -->
+    <script src="static/js/app.js"></script>
+  </body>
+</html>
+
+<!--
+https://github.com/Sntsayi/justFrontEnd.git
+
+Here's a 60/30/10 minimalist color palette for a modern, minimal architecture app:
+1. 60%: White (#FFFFFF) - This will provide a clean and modern foundation for the app's design.
+2. 30%: Dark Gray (#333333) - This color can be used for text, icons, and accents, adding sophistication and contrast to the overall design.
+3. 10%: Teal (#008080) - A pop of teal can be used sparingly to bring a touch of color and vibrancy to the app without overwhelming the minimalistic aesthetic.
+-->
