@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- this script for use icon from Font Awesome website -->
+    <script
+      src="https://kit.fontawesome.com/e236dc9dfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>View And Edit Report</title>
+  </head>
+  <body class="transition-all duration-300 bg-semiWhite">
+    <!-- close the view and edit Page -->
+    <a
+      class="closeBtnInAddReport m-7 mr-14 float-right"
+      href="./engineerPanel.html"
+    >
+      <i
+        class="fa-regular fa-circle-xmark text-3xl hover:text-bluelg transition-all duration-300"
+      ></i>
+    </a>
+    <div class="min-h-screen w-full flex">
+      <div
+        class="mt-5 w-full h-full z-50 bg-semiWhite p-12 flex justify-center flex-col text-right gap-7"
+      >
+        <div class="flex justify-between items-center">
+          <div class="pl-12">
+            <button
+              class="bg-bluelg p-4 rounded-lg text-semiWhite font-bold hover:bg-black hover:border-semiWhite transition-all duration-300"
+            >
+              ویرایش دادن
+            </button>
+          </div>
+          <div class="text-2xl font-bold pr-3">: گزارش شما</div>
+        </div>
+
+        <form
+          action=""
+          class="border-2 border-bluewhte rounded-xl p-7 bg-bluelg"
+        >
+          <textarea
+            readonly
+            class="text-black text-xl bg-semiWhite w-full outline-none rounded-lg p-5 text-right min-h-80"
+          >
+          </textarea>
+          <!-- this input for submit the edited report -->
+          <button
+            disabled
+            type="button"
+            class="cursor-not-allowed border-2 border-black font-bold rounded-xl p-4 mt-4 float-left ml-8 hover:bg-black hover:text-semiWhite transition-all duration-300"
+          >
+            ثبت تغییرات
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./allJsFiles/viewAndEditPage.js"></script>
+  </body>
+</html>

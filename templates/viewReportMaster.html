@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- this script for use icon from Font Awesome website -->
+    <script
+      src="https://kit.fontawesome.com/e236dc9dfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- this script for use icon from Font Awesome website -->
+    <title>View Report Master</title>
+  </head>
+  <body class="transition-all duration-300 bg-semiWhite">
+    <!-- close the view and edit Page -->
+    <a
+      class="closeBtnInAddReport m-7 mr-14 float-right"
+      href="./seeReportMasterPanel.html"
+    >
+      <i
+        class="fa-regular fa-circle-xmark text-3xl hover:text-bluelg transition-all duration-300"
+      ></i>
+    </a>
+    <div class="min-h-screen w-full flex">
+      <div
+        class="mt-5 w-full h-full z-50 bg-semiWhite p-12 flex justify-center flex-col text-right gap-7"
+      >
+        <span class="text-2xl font-bold pr-3 mb-4">: گزارش نوشته شده</span>
+
+        <form
+          action=""
+          class="border-2 border-bluewhte rounded-xl p-7 bg-bluelg"
+        >
+          <textarea
+            readonly
+            class="text-black text-xl bg-semiWhite w-full outline-none rounded-lg p-5 text-right min-h-80"
+          >
+          </textarea>
+
+          <!-- this two button for confirm and add master report....at first
+            the addMasterReport button hide after the confirmed manufactury report then the 
+            that button is appear.         
+        -->
+          <div class="flex justify-between items-center">
+            <!-- left -->
+            <div class="flex space-x-2">
+              <div>
+                <button
+                  type="button"
+                  class="ConfirmReport border-2 hover:bg-black hover:text-semiWhite border-black font-bold rounded-xl p-4 mt-4 transition-all duration-300"
+                >
+                  تایید گزارش
+                </button>
+              </div>
+            </div>
+
+            <!-- right -->
+            <div class="flex space-x-3">
+              <span class="textAnnounce text-bestRed font-extrabold text-xl"
+                >تایید نشده</span
+              >
+              <div>
+                <i
+                  class="iconAnnounce text-3xl text-bestRed fa-regular fa-circle-xmark"
+                ></i>
+                <!-- <i
+                  class="text-2xl text-bestGreen fa-regular fa-circle-check"
+                ></i> -->
+                <!-- 
+                    confirm
+                    <i class="fa-solid fa-circle-check"></i>
+                 -->
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./allJsFiles/viewReportMaster.js"></script>
+  </body>
+</html>

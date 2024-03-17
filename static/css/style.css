@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* add our custom components */
+@layer components {
+  /* hidden the sidebar */
+  .hiddenSidebar {
+    @apply translate-x-150% overflow-x-hidden overflow-hidden;
+  }
+}

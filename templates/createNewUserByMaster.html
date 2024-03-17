@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- this script for use icon from Font Awesome website -->
+    <script
+      src="https://kit.fontawesome.com/e236dc9dfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- this script for use icon from Font Awesome website -->
+    <link rel="stylesheet" href="static/css/style2.css" />
+    <title>Create New User</title>
+  </head>
+  <body class="transition-all duration-700 bg-semiWhite">
+    <div class="min-h-screen w-full flex relative">
+      <!-- left and center -->
+
+      <div class="md:w-4/5 w-full p-6">
+        <!-- logo  -->
+        <div>LogoWebPage</div>
+
+        <!-- RegisterUserByMaster -->
+        <div
+          class="bg-bluelg pt-7 pr-0 pl-20 pb-11 mt-32 m-16 rounded-md min-h-screen"
+        >
+
+
+
+
+          <form action="/create_user" method="post" class="grid grid-cols-3 float-right gap-y-10">
+            <div class="flex gap-2">
+              <input
+                class="imgInput hidden"
+                type="file"
+                id="imageInput"
+                name="imageInput"
+                class="imgInput"
+              />
+
+              <img
+                src="../assets/imgs/images.jpg"
+                alt=""
+                accept=".jpg,.jpeg,.png"
+                class="imgOfInput rounded-full object-center w-44 h-44"
+              /> 
+
+              <label for="imageInput" class="text-center">
+                <i
+                  class="fa-solid fa-circle-plus cursor-pointer text-semiWhite"
+                ></i>
+              </label>
+            </div>
+
+            <div class="flex gap-2 mt-20">
+              <input
+                type="text"
+                id="lName"
+                name="lName"
+                class="h-6 p-5 rounded-lg outline-none text-right bg-semiWhite"
+                placeholder="نام خانوادگی خود را وارد کنید"
+              />
+              <label for="lName" class="pr-6">: نام خانوادگی</label>
+            </div>
+
+            <div class="flex gap-2 mt-20">
+              <input
+                type="text"
+                id="fName"
+                name="fName"
+                class="h-6 p-5 rounded-lg outline-none text-right bg-semiWhite"
+                placeholder="نام خود را وارد کنید"
+              />
+              <label for="fName">: نام</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input
+                type="text"
+                id="lName"
+                name="lName"
+                class="p-2 rounded-lg outline-none text-right bg-semiWhite"
+                placeholder="نام پدر خود را وارد کنید"
+              />
+              <label for="lName"> :نام پدر </label>
+            </div>
+
+            <div class="flex gap-2">
+              <select
+                name="fName"
+                id="fName"
+                name="fName"
+                class="rounded-lg inline-block p-2 w-52 text-right text-black bg-semiWhite"
+              >
+                <option value="">زیردیپلوم</option>
+                <option value="">دیپلوم</option>
+                <option value="">لیسانس</option>
+                <option value="">فوق لیسانس</option>
+                <option value="">دکتری</option>
+              </select>
+              <label for="fName">: مدرک</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input
+                type="text"
+                id="fName"
+                name="fName"
+                class="p-2 rounded-lg outline-none bg-semiWhite placeholder:text-right"
+                placeholder="کدملی خود را وارد کنید"
+              />
+              <label for="fName">: کدملی</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input
+                type="email"
+                id="lName"
+                name="lName"
+                class="p-2 rounded-lg outline-none bg-semiWhite"
+                placeholder="example@gmail.com"
+              />
+              <label for="lName">: ایمیل</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input
+                type="date"
+                id="lName"
+                name="lName"
+                class="p-2 rounded-lg outline-none w-52 bg-semiWhite"
+              />
+              <label for="lName">: تاریح تولد</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input
+                type="text"
+                id="lName"
+                name="lName"
+                class="p-2 rounded-lg outline-none bg-semiWhite placeholder:text-right"
+                placeholder="شماره تلفن خود را وارد کنید"
+              />
+              <label for="lName">: تلفن همراه</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input
+                type="text"
+                id="lName"
+                name="lName"
+                class="p-2 rounded-lg outline-none bg-semiWhite placeholder:text-right"
+                placeholder=" رمز عبور را دوباره وارد نمایید"
+              />
+              <label for="lName">: تکرار رمز عبور</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input
+                type="text"
+                id="lName"
+                name="lName"
+                class="p-2 rounded-lg outline-none bg-semiWhite placeholder:text-right"
+                placeholder="شماره تلفن خود را وارد کنید"
+              />
+              <label for="lName">: رمز عبور</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input
+                type="text"
+                id="lName"
+                name="lName"
+                class="p-2 rounded-lg outline-none bg-semiWhite placeholder:text-right placeholder:text-sm placeholder:font-bold"
+                placeholder="سریال شناسنامه را وارد نمایید"
+              />
+              <label for="lName">: سریال شناسنامه</label>
+            </div>
+
+            <!-- <div class="flex gap-2">
+              <input type="text" id="lName" class="h-6 p-4 rounded-lg" />
+              <label for="lName">: </label>
+            </div>
+
+            <div class="flex gap-2">
+              <input type="text" id="lName" class="h-6 p-4 rounded-lg" />
+              <label for="lName">: نام خانوادگی</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input type="text" id="lName" class="h-6 p-4 rounded-lg" />
+              <label for="lName">: نام خانوادگی</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input type="text" id="lName" class="h-6 p-4 rounded-lg" />
+              <label for="lName">: نام خانوادگی</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input type="text" id="lName" class="h-6 p-4 rounded-lg" />
+              <label for="lName">: نام خانوادگی</label>
+            </div>
+
+            <div class="flex gap-2">
+              <input type="text" id="lName" class="h-6 p-4 rounded-lg" />
+              <label for="lName">: نام خانوادگی</label>
+            </div> -->
+          </form>
+
+
+
+
+
+
+
+        </div>
+        <!-- RegisterUserByMaster -->
+      </div>
+
+      <!-- left and center -->
+
+      <!-- right sidebar -->
+      <!-- in mobile we see sidebarand button open or close side -->
+      <div
+        class="sidebar transition-all duration-300 absolute top-0 right-0 w-64 md:hidden bg-bluelg text-semiWhite h-screen rounded-l-lg text-center p-2 z-50 hiddenSidebar hidden"
+      >
+        <!-- for close button -->
+        <div class="text-right p-5">
+          <button class="closebarButton">
+            <i
+              class="fa-regular fa-circle-xmark text-3xl hover:text-black transition-all duration-500"
+            ></i>
+          </button>
+        </div>
+        <!-- for close button -->
+        <div class="mt-16 text-lg font-bold">
+          <!-- reports page (implement with ajax) -->
+          <ul class="space-y-4 tracking-widest">
+            <li>
+              <div
+                class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+              >
+                <a
+                  href="{% url 'user_management' %}"
+                  class="reportsButton cursor-pointer"
+                  >مدیریت کاربر</a
+                >
+              </div>
+            </li>
+
+            <li class="border-b-2"></li>
+            <li>
+              <div
+                class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+              >
+                <a
+                  class="reportsButton cursor-pointer"
+                  href="{% url 'see_master_report' %}"
+                  >دیدن گزارشات</a
+                >
+              </div>
+            </li>
+
+            <li class="border-b-2"></li>
+
+            <li>
+              <!-- changes password page (implement with ajax) -->
+              <div
+                class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+              >
+                <a
+                  class="changePassBtn cursor-pointer"
+                  href="{% url 'change_password_master' %}"
+                >
+                  تغییر رمز عبور
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- in mobile we see sidebarand button open or close side -->
+
+      <!-- menuButton -->
+      <button
+        class="menuButton md:hidden inline-block p-6 text-dark-gray absolute top-0 right-0 z-10"
+      >
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      <div
+        class="md:w-1/5 hidden md:inline-block text-right border border-l-2 border-dark-gray text-semiWhite bg-blue-100"
+      >
+        <div
+          class="m-4 border border-gray-400 bg-bluelg h-[calc(100%_-_2rem)] rounded-lg text-center p-2"
+        >
+          <div class="mt-24 text-lg font-bold">
+            <!-- reports page (implement with ajax) -->
+            <ul class="space-y-8 tracking-widest">
+              <li>
+                <div
+                  class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+                >
+                  <a
+                    href="{% url 'user_management' %}"
+                    class="reportsButton cursor-pointer"
+                    >مدیریت کاربر</a
+                  >
+                </div>
+              </li>
+
+              <li>
+                <div
+                  class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+                >
+                  <a
+                    class="reportsButton cursor-pointer"
+                    href="{% url 'see_master_report' %}"
+                    >دیدن گزارشات</a
+                  >
+                </div>
+              </li>
+
+              <li>
+                <!-- changes password page (implement with ajax) -->
+                <div
+                  class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+                >
+                  <a
+                    class="changePassBtn cursor-pointer"
+                    href="{% url 'change_password_master' %}"
+                    >تغییر رمز عبور</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- right sidebar -->
+    </div>
+    <script src="static/js/createNewUserByMaster.js"></script>
+  </body>
+</html>

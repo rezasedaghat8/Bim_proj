@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- this script for use icon from Font Awesome website -->
+    <script
+      src="https://kit.fontawesome.com/e236dc9dfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- this script for use icon from Font Awesome website -->
+    <link rel="stylesheet" href="static/css/style2.css" />
+    <title>Ban User</title>
+  </head>
+  <body class="transition-all duration-700 bg-semiWhite">
+    <div class="min-h-screen w-full flex relative">
+      <!-- left and center -->
+
+      <div class="md:w-4/5 w-full p-6">
+        <!-- logo  -->
+        <div>LogoWebPage</div>
+        <div class="mt-20 text-right p-10 font-bold text-2xl tracking-wider">
+          <!-- search box -->
+          <div class="relative mr-7">
+            <label for="searchBox">
+              <i
+                class="fa-solid fa-magnifying-glass absolute cursor-pointer top-1 right-1 bg-semiWhite p-2 rounded-full"
+              ></i>
+            </label>
+
+            <input
+              type="search"
+              id="searchBox"
+              placeholder=". کد ملی کاربر مورد نظر را وارد کنید"
+              class="transition-all duration-500 border-2 border-bluelg text-lg rounded-3xl text-semiWhite bg-semiWhite p-2 pl-4 pr-12 inline-block w-14 focus:w-96 ease-in focus:bg-bluelg placeholder:text-gray-700 placeholder:text-right placeholder:text-lg"
+            />
+          </div>
+
+          <!-- user of search box -->
+          <div
+            class="bg-bluelg p-7 mt-7 rounded-3xl flex items-center justify-center mr-7 ml-7"
+          >
+
+
+
+            <form action="/ban_user" method="post" class="flex flex-col gap-0 w-80% mb-8 text-lg">
+              <div class="gap-2 flex flex-col">
+                <img
+                  src="../assets/imgs/pexels-ahmed-adly-1270184.jpg"
+                  alt="Not Found!"
+                  class="object-center w-36 h-36 rounded-full"
+                />
+                <label for="Fname">: نام</label>
+                <input
+                  type="text"
+                  id="Fname"
+                  name="Fname"
+                  value="صبوری"
+                  disabled
+                  class="text-right p-2 pr-4 rounded-lg bg-semiWhite"
+                />
+
+                <label for="lastName">: نام خانوادگی</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  value="صبوری"
+                  disabled
+                  class="text-right p-2 pr-4 rounded-lg bg-semiWhite"
+                />
+
+                <label for="birthday">: تاریخ تولد</label>
+                <input
+                  type="text"
+                  id="birthday"
+                  name="birthday"
+                  value="2000-07-22"
+                  class="p-2 pl-4 rounded-lg bg-semiWhite"
+                />
+
+                <label for="grade">: مقطع تحصیلی</label>
+                <input
+                  type="text"
+                  id="grade"
+                  name="grade"
+                  class="p-2 pr-4 text-right rounded-lg bg-semiWhite"
+                  disabled
+                  value="لیسانس"
+                />
+              </div>
+              <span class="mt-8"
+                ><button
+                  type="submit"
+                  class="bg-bestRed text-semiWhite text-bold hover:bg-semiWhite hover:text-black transition-all duration-300 p-3 rounded-lg float-left"
+                >
+                  حذف کاربر
+                </button>
+              </span>
+            </form>
+
+
+
+
+          </div>
+          <!-- user of search box -->
+        </div>
+      </div>
+
+      <!-- left and center -->
+
+      <!-- right sidebar -->
+      <!-- in mobile we see sidebarand button open or close side -->
+      <div
+        class="sidebar transition-all duration-300 absolute top-0 right-0 w-64 md:hidden bg-bluelg text-semiWhite h-screen rounded-l-lg text-center p-2 z-50 hiddenSidebar hidden"
+      >
+        <!-- for close button -->
+        <div class="text-right p-5">
+          <button class="closebarButton">
+            <i
+              class="fa-regular fa-circle-xmark text-3xl hover:text-black transition-all duration-500"
+            ></i>
+          </button>
+        </div>
+        <!-- for close button -->
+        <div class="mt-16 text-lg font-bold">
+          <!-- reports page (implement with ajax) -->
+          <ul class="space-y-4 tracking-widest">
+            <li>
+              <div
+                class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+              >
+                <a
+                  href="{% url 'user_management' %}"
+                  class="reportsButton cursor-pointer"
+                  >مدیریت کاربر</a
+                >
+              </div>
+            </li>
+
+            <li class="border-b-2"></li>
+            <li>
+              <div
+                class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+              >
+                <a
+                  class="reportsButton cursor-pointer"
+                  href="{% url 'see_master_report' %}"
+                  >دیدن گزارشات</a
+                >
+              </div>
+            </li>
+
+            <li class="border-b-2"></li>
+
+            <li>
+              <!-- changes password page (implement with ajax) -->
+              <div
+                class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+              >
+                <a
+                  class="changePassBtn cursor-pointer"
+                  href="{% url 'change_password_master' %}"
+                >
+                  تغییر رمز عبور
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- in mobile we see sidebarand button open or close side -->
+
+      <!-- menuButton -->
+      <button
+        class="menuButton md:hidden inline-block p-6 text-dark-gray absolute top-0 right-0 z-10"
+      >
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      <div
+        class="md:w-1/5 hidden md:inline-block text-right border border-l-2 border-dark-gray text-semiWhite bg-blue-100"
+      >
+        <div
+          class="m-4 border border-gray-400 bg-bluelg h-[calc(100%_-_2rem)] rounded-lg text-center p-2"
+        >
+          <div class="mt-24 text-lg font-bold">
+            <!-- reports page (implement with ajax) -->
+            <ul class="space-y-8 tracking-widest">
+              <li>
+                <div
+                  class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+                >
+                  <a
+                    href="{% url 'user_management' %}"
+                    class="reportsButton cursor-pointer"
+                    >مدیریت کاربر</a
+                  >
+                </div>
+              </li>
+
+              <li>
+                <div
+                  class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+                >
+                  <a
+                    class="reportsButton cursor-pointer"
+                    href="{% url 'see_master_report' %}"
+                    >دیدن گزارشات</a
+                  >
+                </div>
+              </li>
+
+              <li>
+                <!-- changes password page (implement with ajax) -->
+                <div
+                  class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+                >
+                  <a
+                    class="changePassBtn cursor-pointer"
+                    href="{% url 'change_password_master' %}"
+                    >تغییر رمز عبور</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- right sidebar -->
+    </div>
+    <script src="static/js/banUsersMaster.js"></script>
+  </body>
+</html>

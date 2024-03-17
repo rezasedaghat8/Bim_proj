@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/style2.css" />
+    <!-- this script for use icon from Font Awesome website -->
+    <script
+      src="https://kit.fontawesome.com/e236dc9dfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- this script for use icon from Font Awesome website -->
+    <title>See All Report superviserPanel</title>
+  </head>
+  <body class="transition-all duration-300 bg-semiWhite relative">
+    <div class="min-h-screen w-full flex relative">
+      <!-- left and center -->
+      <div class="md:w-4/5 w-full p-6">
+        <!-- logo  -->
+        <div>LogoWebPage</div>
+        <div class="text-right p-9 mt-20 tracking-wider">
+          <div class="allReports space-y-5">
+            
+            
+            <!-- report -->
+            
+            
+            <form id="yourForm" action="/view_reports_supervisor" method="post">    
+              {% csrf_token %} 
+              {% for item in all_reports %}
+            
+            <div class="report">
+              <div
+                class="border-2 border-bluewhte rounded-xl p-7 bg-bluelg text-semiWhite relative"
+              >
+
+                <p id="yourParagraph" type="text" class="max-h-24 overflow-hidden">
+
+                  {{ item.report }}
+
+                </p>
+                
+                <input type="hidden" name="data_from_p" id="data_from_p" value="{{ item.report }}">
+                
+                
+              <button type="submit" onclick="getData('{{ item.report }}')">
+                <a
+                  href="{% url 'view_reports_exact_supervisor' %}"
+                  class="bg-red-500 absolute cursor-pointer top-1/2 right-88% p-3 rounded-lg text-black hover:bg-semiWhite transition-all duration-300 font-bold"
+                >
+                  مشاهده
+                
+                </a></button><br>
+              </div>
+            </div><br>
+            {% endfor %}
+        </form>
+
+        <script>
+          function getData(data) {
+              document.getElementById('displayArea').innerText = "Clicked Data: " + data;
+          }
+        </script>
+
+            <!-- report -->
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- left and center -->
+
+      <!-- right sidebar -->
+      <!-- in mobile state we see sidebarand button open or close side -->
+      <div
+        class="sidebar transition-all duration-300 absolute top-0 right-0 w-64 md:hidden bg-bluelg text-semiWhite h-screen rounded-l-lg text-center p-2 z-50 hiddenSidebar hidden"
+      >
+        <!-- for close button -->
+        <div class="text-right p-5">
+          <button class="closebarButton">
+            <i
+              class="fa-regular fa-circle-xmark text-3xl hover:text-black transition-all duration-500"
+            ></i>
+          </button>
+        </div>
+        <!-- for close button -->
+        <div class="mt-16 text-lg font-bold">
+          <!-- reports page (implement with ajax) -->
+          <ul class="space-y-4 tracking-widest">
+            <li>
+              <!-- changes password page (implement with ajax) -->
+              <div
+                class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+              >
+                <a
+                  class="cursor-pointer"
+                  href="{% url 'change_password_supervisor' %}"
+                  >تغییر رمز عبور</a
+                >
+              </div>
+            </li>
+            <li class="border-b-2"></li>
+            <li>
+              <div
+                class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+              >
+                <a class="cursor-pointer" href="{% url 'supervisor' %}"
+                  >صفحه اصلی</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- in mobile state we see sidebarand button open or close side -->
+
+      <!-- in web state -->
+      <!-- menuButton -->
+      <button
+        class="menuButton md:hidden inline-block p-6 text-dark-gray absolute top-0 right-0 z-10"
+      >
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      <div
+        class="md:w-1/5 hidden md:inline-block text-right border border-l-2 border-dark-gray text-semiWhite bg-blue-100"
+      >
+        <div
+          class="m-4 border border-gray-400 bg-bluelg h-[calc(100%_-_2rem)] rounded-lg text-center p-2"
+        >
+          <div class="mt-24 text-lg font-bold">
+            <!-- reports page (implement with ajax) -->
+            <ul class="space-y-8 tracking-widest">
+              <li>
+                <!-- changes password page (implement with ajax) -->
+                <div
+                  class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+                >
+                  <a
+                    class="cursor-pointer"
+                    href="{% url 'change_password_supervisor' %}"
+                    >تغییر رمز عبور</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div
+                  class="hover:text-black hover:bg-semiWhite hover:rounded-lg p-3 transition-all duration-500"
+                >
+                  <a class="cursor-pointer" href="{% url 'supervisor' %}"
+                    >صفحه اصلی</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- in web state -->
+      <!-- right sidebar -->
+    </div>
+    <script src="static/js/reportsPanel.js"></script>
+  </body>
+</html>

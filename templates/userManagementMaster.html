@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- this script for use icon from Font Awesome website -->
+    <script
+      src="https://kit.fontawesome.com/e236dc9dfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- this script for use icon from Font Awesome website -->
+    <link rel="stylesheet" href="static/css/style2.css" />
+    <title>User Management</title>
+  </head>
+  <body
+    class="transition-all duration-300 bg-semiWhite flex items-center justify-center flex-col"
+  >
+    <div class="w-full flex justify-between items-center m-5">
+      <div class="inline-block ml-4">
+        <span>Logo webpage</span>
+      </div>
+
+      <!-- close the view and edit Page -->
+      <div>
+        <a class="closeBtnInAddReport mr-8" href="{% url 'master' %}">
+          <i
+            class="fa-regular fa-circle-xmark text-3xl hover:text-bluelg transition-all duration-300"
+          ></i>
+        </a>
+      </div>
+    </div>
+
+    <main class="w-50% mt-32 bg-bluelg rounded-2xl p-8">
+      <div
+        class="rounded-lg font-bold w-full h-full bg-semiWhite p-12 flex items-center justify-center flex-col text-right gap-7"
+      >
+        <div
+          class="cursor-pointer hover:bg-bluelg hover:text-semiWhite transition-all duration-300 rounded-lg"
+        >
+          <a href="{% url 'ban_user' %}" class="p-5 inline-block"
+            >ممنوع کردن کاربر</a
+          >
+        </div>
+        <div class="border border-black w-full"></div>
+
+        <div
+          class="cursor-pointer hover:bg-bluelg hover:text-semiWhite transition-all duration-300 rounded-lg"
+        >
+          <a href="{% url 'create_user' %}" class="p-5 inline-block"
+            >ایجاد کاربر جدید</a
+          >
+        </div>
+        <div class="border border-black w-full"></div>
+        <div
+          class="cursor-pointer hover:bg-bluelg hover:text-semiWhite transition-all duration-300 rounded-lg"
+        >
+          <a href="{% url 'check_password' %}" class="p-5 inline-block"
+            >Check password recovery token</a
+          >
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
