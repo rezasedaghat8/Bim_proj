@@ -37,46 +37,30 @@
         <!-- Form with dynamic inputs and buttons -->
 
 <!-- your_template.html -->
+{% for item in engineer_report %}
+
 <form id="yourForm" action="/reports_engineer" method="post">    
   {% csrf_token %} 
-  {% for item in engineer_report %}
+  
   <div class="report">
       <div class="border-2 border-bluewhte rounded-xl p-7 bg-bluelg text-semiWhite relative">
           <p class="max-h-24 overflow-hidden">
               {{ item.report }}
           </p>
           
-          <!-- Store the clicked data in a hidden input field -->
-          <input type="hidden" name="data_from_p" class="data_from_p" value="{{ item.report }}">
-          
-          <!-- Submit the form and pass the clicked data -->
-          <button type="button" onclick="submitForm(this)">  
-              <a href="{% url 'view_and_edit_engineer' %}" 
+          <input type="hidden" id="item_id" name="item_id" value="{{ item.id_number }}">
+             
+          <button type="submit" 
                  class="bg-red-500 absolute top-1/2 right-85% p-3 rounded-lg text-black hover:bg-semiWhite transition-all duration-300 font-bold">
                   مشاهده و تغییر
-              </a>
-          </button><br>
+          </button>
+          <br>
       </div>
   </div><br>
-  {% endfor %}
+  
 </form>
 
-<script>
-  function submitForm(button) {
-      // Find the closest div with the 'report' class
-      var reportDiv = button.closest('.report');
-      
-      // Find the hidden input field within the div
-      var hiddenInput = reportDiv.querySelector('.data_from_p');
-      
-      // Set the value of the hidden input with the clicked data
-      var clickedData = hiddenInput.value;
-      
-      // Submit the form
-      document.getElementById('yourForm').submit();
-  }
-</script>
-
+{% endfor %}
 
         
             {% comment %} <form id="yourForm" action="/reports_engineer" method="post">    

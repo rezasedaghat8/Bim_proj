@@ -24,6 +24,7 @@ urlpatterns = [
     path('master' , views.master, name="master"),
     path('user_management' , views.user_management, name="user_management"),
     path('see_master_report' , views.see_master_report, name="see_master_report"),
+    path('see_exact_master_report' , views.see_exact_master_report, name="see_exact_master_report"),
     path('change_password_master' , views.change_password_master, name="change_password_master"),
     path('ban_user' , views.ban_user, name="ban_user"),
     path('create_user' , views.create_user, name="create_user"),

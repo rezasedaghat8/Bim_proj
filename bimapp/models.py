@@ -27,6 +27,7 @@ class Manufactory_report(models.Model):
     report = models.CharField(max_length=500)
     id_number = models.IntegerField(default=0)
     
+    
     def __str__(self):
         return str(self.id_number)
     
@@ -37,6 +38,7 @@ class Master_report(models.Model):
     title = models.CharField(max_length=8)
     report = models.CharField(max_length=500)
     id_number = models.IntegerField(default=0)
+    
     
     def __str__(self):
         return str(self.id_number)

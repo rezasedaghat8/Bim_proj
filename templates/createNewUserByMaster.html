@@ -28,7 +28,14 @@
 
 
 
+
+
           <form action="/create_user" method="post" class="grid grid-cols-3 float-right gap-y-10">
+            {% csrf_token %}
+
+
+
+
             <div class="flex gap-2">
               <input
                 class="imgInput hidden"
@@ -66,8 +73,8 @@
             <div class="flex gap-2 mt-20">
               <input
                 type="text"
-                id="fName"
-                name="fName"
+                id="name"
+                name="name"
                 class="h-6 p-5 rounded-lg outline-none text-right bg-semiWhite"
                 placeholder="نام خود را وارد کنید"
               />
@@ -104,8 +111,8 @@
             <div class="flex gap-2">
               <input
                 type="text"
-                id="fName"
-                name="fName"
+                id="username"
+                name="username"
                 class="p-2 rounded-lg outline-none bg-semiWhite placeholder:text-right"
                 placeholder="کدملی خود را وارد کنید"
               />
@@ -147,8 +154,8 @@
             <div class="flex gap-2">
               <input
                 type="text"
-                id="lName"
-                name="lName"
+                id="password_again"
+                name="password_again"
                 class="p-2 rounded-lg outline-none bg-semiWhite placeholder:text-right"
                 placeholder=" رمز عبور را دوباره وارد نمایید"
               />
@@ -158,8 +165,8 @@
             <div class="flex gap-2">
               <input
                 type="text"
-                id="lName"
-                name="lName"
+                id="password"
+                name="password"
                 class="p-2 rounded-lg outline-none bg-semiWhite placeholder:text-right"
                 placeholder="شماره تلفن خود را وارد کنید"
               />
@@ -176,6 +183,10 @@
               />
               <label for="lName">: سریال شناسنامه</label>
             </div>
+
+            <button type="submit">
+              ثبت کاربر جدید
+            </button>
 
             <!-- <div class="flex gap-2">
               <input type="text" id="lName" class="h-6 p-4 rounded-lg" />
@@ -206,6 +217,11 @@
               <input type="text" id="lName" class="h-6 p-4 rounded-lg" />
               <label for="lName">: نام خانوادگی</label>
             </div> -->
+          
+          
+          
+          
+          
           </form>
 
 

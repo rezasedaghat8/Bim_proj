@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="static/css/style2.css" />
     <!-- this script for use icon from Font Awesome website -->
     <script
       src="https://kit.fontawesome.com/e236dc9dfa.js"
@@ -16,7 +16,7 @@
     <!-- close the view and edit Page -->
     <a
       class="closeBtnInAddReport m-7 mr-14 float-right"
-      href="./seeReportMasterPanel.html"
+      href="{% url 'see_master_report' %}"
     >
       <i
         class="fa-regular fa-circle-xmark text-3xl hover:text-bluelg transition-all duration-300"
@@ -28,14 +28,22 @@
       >
         <span class="text-2xl font-bold pr-3 mb-4">: گزارش نوشته شده</span>
 
+
+
         <form
-          action=""
+          action="/see_exact_master_report"
+          method="post"
           class="border-2 border-bluewhte rounded-xl p-7 bg-bluelg"
         >
+        {% csrf_token %} 
+
+
           <textarea
             readonly
             class="text-black text-xl bg-semiWhite w-full outline-none rounded-lg p-5 text-right min-h-80"
           >
+          {{ current_report }}
+
           </textarea>
 
           <!-- this two button for confirm and add master report....at first
@@ -47,7 +55,7 @@
             <div class="flex space-x-2">
               <div>
                 <button
-                  type="button"
+                  type="submit"
                   class="ConfirmReport border-2 hover:bg-black hover:text-semiWhite border-black font-bold rounded-xl p-4 mt-4 transition-all duration-300"
                 >
                   تایید گزارش
@@ -74,9 +82,16 @@
               </div>
             </div>
           </div>
+        
+        
+        
         </form>
+
+
+
+
       </div>
     </div>
-    <script src="./allJsFiles/viewReportMaster.js"></script>
+    <script src="static/js/viewReportMaster.js"></script>
   </body>
 </html>

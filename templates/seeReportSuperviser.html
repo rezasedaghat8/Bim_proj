@@ -23,11 +23,11 @@
             
             
             <!-- report -->
-            
+            {% for item in all_reports %}
             
             <form id="yourForm" action="/view_reports_supervisor" method="post">    
               {% csrf_token %} 
-              {% for item in all_reports %}
+              
             
             <div class="report">
               <div
@@ -40,27 +40,21 @@
 
                 </p>
                 
-                <input type="hidden" name="data_from_p" id="data_from_p" value="{{ item.report }}">
+                <input type="hidden" name="report_id" id="report_id" value="{{ item.id_number }}">
                 
-                
-              <button type="submit" onclick="getData('{{ item.report }}')">
-                <a
-                  href="{% url 'view_reports_exact_supervisor' %}"
+                <button
+                type="submit"
                   class="bg-red-500 absolute cursor-pointer top-1/2 right-88% p-3 rounded-lg text-black hover:bg-semiWhite transition-all duration-300 font-bold"
                 >
                   مشاهده
                 
-                </a></button><br>
+              </button><br>
               </div>
             </div><br>
-            {% endfor %}
+            
         </form>
 
-        <script>
-          function getData(data) {
-              document.getElementById('displayArea').innerText = "Clicked Data: " + data;
-          }
-        </script>
+        {% endfor %}
 
             <!-- report -->
 

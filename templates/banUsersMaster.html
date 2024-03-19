@@ -28,13 +28,27 @@
               ></i>
             </label>
 
+
+        <form action="/ban_user" method="post">
+          {% csrf_token %}  
+            
+          <button type="submit">Submit</button>
             <input
               type="search"
               id="searchBox"
+              name="searchBox"
               placeholder=". کد ملی کاربر مورد نظر را وارد کنید"
               class="transition-all duration-500 border-2 border-bluelg text-lg rounded-3xl text-semiWhite bg-semiWhite p-2 pl-4 pr-12 inline-block w-14 focus:w-96 ease-in focus:bg-bluelg placeholder:text-gray-700 placeholder:text-right placeholder:text-lg"
             />
+            
+          </form>
+          
           </div>
+
+
+        
+
+
 
           <!-- user of search box -->
           <div
@@ -44,6 +58,10 @@
 
 
             <form action="/ban_user" method="post" class="flex flex-col gap-0 w-80% mb-8 text-lg">
+              {% csrf_token %}
+
+
+
               <div class="gap-2 flex flex-col">
                 <img
                   src="../assets/imgs/pexels-ahmed-adly-1270184.jpg"
@@ -55,17 +73,17 @@
                   type="text"
                   id="Fname"
                   name="Fname"
-                  value="صبوری"
+                  value="{{ name }}"
                   disabled
                   class="text-right p-2 pr-4 rounded-lg bg-semiWhite"
                 />
 
-                <label for="lastName">: نام خانوادگی</label>
+                <label for="lastName">: نام کاربری</label>
                 <input
                   type="text"
-                  id="lastName"
-                  name="lastName"
-                  value="صبوری"
+                  id="username"
+                  name="username"
+                  value="{{ username }}"
                   disabled
                   class="text-right p-2 pr-4 rounded-lg bg-semiWhite"
                 />
@@ -97,6 +115,9 @@
                   حذف کاربر
                 </button>
               </span>
+            
+            
+            
             </form>
 
 

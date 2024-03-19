@@ -26,9 +26,10 @@
 
 
             <!-- report -->
-            <form id="yourForm" action="/reports_engineer" method="post">  
+            {% for item in all_reports %}
+            <form id="yourForm" action="/see_master_report" method="post">  
               {% csrf_token %} 
-              {% for item in all_reports %}
+              
             
             <div class="report">
               <div
@@ -37,30 +38,24 @@
 
 
                   <p class="max-h-24 overflow-hidden">
-
-
-
                     {{ item.report }}
-
-
-
-
                   </p>
 
+                  <input type="hidden" name="report_id_master" id="report_id_master" value="{{ item.id_number }}">
 
-                <a
-                  href="{% url 'see_master_report' %}"
+                <button
+                  type="submit"
                   class="bg-red-500 absolute cursor-pointer top-1/2 right-88% p-3 rounded-lg text-black hover:bg-semiWhite transition-all duration-300 font-bold"
                 >
                   مشاهده
-                </a>
+                </button>
               </div>
             </div> <br>
-            <!-- report -->
-            {% endfor %}
+            
           </form>
-
-
+          {% endfor %}
+      
+          <!-- report -->
 
 
           </div>
